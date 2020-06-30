@@ -1,0 +1,71 @@
+.btn {
+  display: inline-block;
+  font-weight: bold;
+  text-decoration: none;
+  background-color: transparent;
+  border: none;
+  cursor: pointer;
+}
+
+.btn--primary {
+  color: $white;
+  width: 118px;
+  height: 43px;
+  padding: 1em 1.5em;
+  font-size: 0.75em;
+  background-color: $darkslategray;
+  transition: opacity 0.3s;
+  margin-top: auto;
+  text-transform: uppercase;
+  &:hover {
+    background-color: $lightseablue;
+  }
+}
+
+.btn--secondary {
+  font-size: 0.9rem;
+  color: $darkslategray;
+  &--seablue {
+    color: $lightseablue;
+  }
+}
+
+.btn--tertiary {
+  color: $white;
+  width: 90px;
+  height: 40px;
+  padding: 0.5em 0.75em;
+  font-size: 0.6em;
+  background-color: $darkslategray;
+  transition: opacity 0.3s;
+  margin-top: auto;
+  text-transform: uppercase;
+  &:disabled {
+    display: none;
+  }
+}
+
+.btn--quaternary {
+  color: $white;
+  width: 70px;
+  height: 35px;
+  padding: 0.25em 0.5em;
+  font-size: 0.55em;
+  background-color: $darkslategray;
+  transition: opacity 0.3s;
+  margin-top: auto;
+  text-transform: uppercase;
+}
+
+.btn--quinary {
+  font-size: 0.85rem;
+  color: $darkslategray;
+}
+
+.btn--seablue {
+  background-color: $lightseablue;
+}
+
+.btn--lightgray {
+  background-color: $lightgray;
+}
