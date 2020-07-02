@@ -1,5 +1,5 @@
 import React from "react";
-// import Button from "../Button";
+import Button from "../Button";
 
 const TravelsTable = (props) => {
   return (
@@ -20,11 +20,11 @@ const TravelsTable = (props) => {
             {props.travels.length > 0 ? (
               props.travels.map((travel) => (
                 <tr>
+                  <td>{travel.year}</td>
                   <td>{travel.city}</td>
                   <td>{travel.country}</td>
-                  <td>{travel.year}</td>
-                  <td>edit</td>
-                  <td>delete</td>
+                  <Button value="Edit" />
+                  <Button value="Delete" />
                 </tr>
               ))
             ) : (

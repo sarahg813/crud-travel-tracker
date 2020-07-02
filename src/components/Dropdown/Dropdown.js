@@ -1,6 +1,5 @@
 import React from "react";
 import PropTypes from "prop-types";
-import "./Dropdown.scss";
 
 const Dropdown = ({
   className,
@@ -9,7 +8,7 @@ const Dropdown = ({
   name,
   data,
   onChange,
-  placeholder
+  placeholder,
 }) => {
   return (
     <div className="dropdown">
@@ -34,7 +33,7 @@ const Dropdown = ({
 Dropdown.propTypes = {
   value: PropTypes.string,
   name: PropTypes.string,
-  data: PropTypes.array.isRequired
+  data: PropTypes.array.isRequired,
 };
 
 export default Dropdown;
