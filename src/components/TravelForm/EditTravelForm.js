@@ -1,24 +1,31 @@
-import React, { useState } from "react";
+import React, { useState, useEffect } from "react";
 import Button from "../Button";
 import InputField from "../InputField";
 
-const AddTravelForm = (props) => {
-  const initialState = { id: null, city: "", country: "", year: "" };
-  const [travels, setTravels] = useState(initialState);
+const EditTravelForm = (props) => {
+  const [travel, setTravel] = useState(props.selectedTravel);
+
+  useEffect(() => {
+    setTravel(props.selectedTravel);
+  }, [props]);
 
   const handleInputChange = (event) => {
     const { name, value } = event.target;
 
-    setTravels({ ...travels, [name]: value });
+    setTravel({ ...travel, [name]: value });
   };
 
   const handleSubmit = (event) => {
     if (event) {
       event.preventDefault();
 
-      props.addTravel(travels);
-      setTravels(initialState);
+      props.updateTravel(travel.id, travel);
     }
+  };
+
+  const handleOnClick = () => {
+    props.setIsEditing(false);
+    props.setShowAddEditModal(false);
   };
 
   return (
@@ -29,34 +36,40 @@ const AddTravelForm = (props) => {
             label="Year"
             type="text"
             name="year"
-            value={travels.year}
+            value={travel.year}
             onChange={handleInputChange}
           />
           <InputField
             label="City"
             type="text"
             name="city"
-            value={travels.city}
+            value={travel.city}
             onChange={handleInputChange}
           />
           <InputField
             label="Country"
             type="text"
             name="country"
-            value={travels.country}
+            value={travel.country}
             onChange={handleInputChange}
           />
         </div>
         <div>
-          <Button value="Save" type={"submit"} />
           <Button
-            value="Cancel"
-            onClick={() => props.setShowAddEditModal(false)}
+            value="Delete"
+            onClick={() => {
+              props.deleteTravel(travel.id);
+              handleOnClick();
+            }}
           />
+        </div>
+        <div>
+          <Button value="Save" type={"submit"} />
+          <Button value="Cancel" onClick={handleOnClick} />
         </div>
       </form>
     </div>
   );
 };
 
-export default AddTravelForm;
+export default EditTravelForm;

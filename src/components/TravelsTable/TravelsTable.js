@@ -23,8 +23,12 @@ const TravelsTable = (props) => {
                   <td>{travel.year}</td>
                   <td>{travel.city}</td>
                   <td>{travel.country}</td>
-                  <Button value="Edit" />
-                  <Button value="Delete" />
+                  <Button
+                    value="Edit"
+                    onClick={() => {
+                      props.editTravel(travel);
+                    }}
+                  />
                 </tr>
               ))
             ) : (
@@ -34,6 +38,9 @@ const TravelsTable = (props) => {
             )}
           </tbody>
         </table>
+      </div>
+      <div className="travels-add-btn">
+        <Button value="Add" onClick={() => props.setShowAddEditModal(true)} />
       </div>
     </div>
   );
