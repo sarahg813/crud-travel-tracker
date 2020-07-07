@@ -14,8 +14,8 @@ function App() {
   return (
     <div className="App">
       <div className="app-container">
-        <AddTravelForm />
-        <TravelsTable travels={travels} addTravel={addTravel} />
+        <AddTravelForm addTravel={addTravel} />
+        <TravelsTable travels={travels} />
       </div>
     </div>
   );
