@@ -14,9 +14,18 @@ const AddTravelForm = (props) => {
     setTravels({ ...travels, [name]: value });
   };
 
+  const handleSubmit = (event) => {
+    if (event) {
+      event.preventDefault();
+
+      props.addTravel(travels);
+      setTravels(initialState);
+    }
+  };
+
   return (
     <div className="travel-form-container">
-      <form className="travel-form">
+      <form className="travel-form" onSubmit={handleSubmit}>
         <div className="travel-form__inputs">
           <InputField
             label="Year"
