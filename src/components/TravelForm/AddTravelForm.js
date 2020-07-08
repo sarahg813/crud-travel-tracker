@@ -1,6 +1,8 @@
 import React, { useState } from "react";
 import Button from "../Button";
 import InputField from "../InputField";
+import Dropdown from "../Dropdown";
+import CountriesData from "../../data/CountriesData";
 
 const AddTravelForm = (props) => {
   const initialState = { id: null, city: "", country: "", year: "" };
@@ -39,12 +41,15 @@ const AddTravelForm = (props) => {
             value={travels.city}
             onChange={handleInputChange}
           />
-          <InputField
+          <Dropdown
             label="Country"
-            type="text"
+            className={"dropdown__select"}
             name="country"
             value={travels.country}
             onChange={handleInputChange}
+            data={CountriesData}
+            placeholder="Select Country"
+            required
           />
         </div>
         <div>

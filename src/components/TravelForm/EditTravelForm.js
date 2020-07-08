@@ -1,6 +1,8 @@
 import React, { useState, useEffect } from "react";
 import Button from "../Button";
 import InputField from "../InputField";
+import Dropdown from "../Dropdown";
+import CountriesData from "../../data/CountriesData";
 
 const EditTravelForm = (props) => {
   const [travel, setTravel] = useState(props.selectedTravel);
@@ -46,12 +48,15 @@ const EditTravelForm = (props) => {
             value={travel.city}
             onChange={handleInputChange}
           />
-          <InputField
+          <Dropdown
             label="Country"
-            type="text"
+            className={"dropdown__select"}
             name="country"
             value={travel.country}
             onChange={handleInputChange}
+            data={CountriesData}
+            placeholder="Select Country"
+            required
           />
         </div>
         <div>

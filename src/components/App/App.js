@@ -4,6 +4,7 @@ import TravelsData from "../../data/TravelsData";
 import AddTravelForm from "../TravelForm/AddTravelForm";
 import EditTravelForm from "../TravelForm/EditTravelForm";
 import Modal from "../Modal";
+import Earth from "../Earth/Earth";
 
 function App() {
   const initialFormState = { id: null, city: "", country: "", year: "" };
@@ -50,6 +51,9 @@ function App() {
           editTravel={editTravel}
           setShowAddEditModal={setShowAddEditModal}
         />
+      </div>
+      <div>
+        <Earth />
       </div>
 
       {showAddEditModal && (
