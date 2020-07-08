@@ -1,4 +1,4 @@
-import React, { useState } from "react";
+import React, { useState, useEffect } from "react";
 import TravelsTable from "../TravelsTable";
 import TravelsData from "../../data/TravelsData";
 import AddTravelForm from "../TravelForm/AddTravelForm";
@@ -12,6 +12,10 @@ function App() {
   const [isEditing, setIsEditing] = useState(false);
   const [selectedTravel, setSelectedTravel] = useState(initialFormState);
   const [showAddEditModal, setShowAddEditModal] = useState(false);
+
+  useEffect(() => {
+    setTravels(travels.sort((a, b) => a.year - b.year));
+  });
 
   const addTravel = (travel) => {
     travel.id = travels.length + 1;
@@ -35,7 +39,9 @@ function App() {
     setShowAddEditModal(false);
 
     setTravels(
-      travels.map((travel) => (travel.id === id ? updatedTravel : travel))
+      travels
+        .map((travel) => (travel.id === id ? updatedTravel : travel))
+        .sort((a, b) => a.year - b.year)
     );
   };
 

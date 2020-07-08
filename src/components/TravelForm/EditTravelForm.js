@@ -36,7 +36,7 @@ const EditTravelForm = (props) => {
         <div className="travel-form__inputs">
           <InputField
             label="Year"
-            type="text"
+            type="number"
             name="year"
             value={travel.year}
             onChange={handleInputChange}

@@ -1,7 +1,19 @@
-import React from "react";
+import React, { useState } from "react";
 import Button from "../Button";
 
 const TravelsTable = (props) => {
+  // const sortYearAsc = () => {
+  //   setTravels((travels) => {
+  //     travels.sort((a, b) => a.year - b.year);
+  //   });
+  // };
+
+  // const sortYearDesc = () => {
+  //   setTravels((travels) => {
+  //     travels.sort((a, b) => b.year - a.year);
+  //   });
+  // };
+
   return (
     <div className="travels-container">
       <div className="travels__title">
@@ -11,24 +23,26 @@ const TravelsTable = (props) => {
         <table>
           <thead>
             <tr>
+              <th>Year</th>
               <th>City</th>
               <th>Country</th>
-              <th>Year</th>
             </tr>
           </thead>
           <tbody>
             {props.travels.length > 0 ? (
               props.travels.map((travel) => (
-                <tr>
+                <tr key={travel.id}>
                   <td>{travel.year}</td>
                   <td>{travel.city}</td>
                   <td>{travel.country}</td>
-                  <Button
-                    value="Edit"
-                    onClick={() => {
-                      props.editTravel(travel);
-                    }}
-                  />
+                  <td>
+                    <Button
+                      value="Edit"
+                      onClick={() => {
+                        props.editTravel(travel);
+                      }}
+                    />
+                  </td>
                 </tr>
               ))
             ) : (

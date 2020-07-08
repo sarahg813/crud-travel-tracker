@@ -5,13 +5,16 @@ import Dropdown from "../Dropdown";
 import CountriesData from "../../data/CountriesData";
 
 const AddTravelForm = (props) => {
-  const initialState = { id: null, city: "", country: "", year: "" };
+  const initialState = { id: null, city: "", country: "", year: null };
   const [travels, setTravels] = useState(initialState);
 
   const handleInputChange = (event) => {
-    const { name, value } = event.target;
+    const { name, value, type } = event.target;
 
-    setTravels({ ...travels, [name]: value });
+    setTravels({
+      ...travels,
+      [name]: type === "number" ? parseInt(value, 10) : value,
+    });
   };
 
   const handleSubmit = (event) => {
@@ -29,7 +32,7 @@ const AddTravelForm = (props) => {
         <div className="travel-form__inputs">
           <InputField
             label="Year"
-            type="text"
+            type="number"
             name="year"
             value={travels.year}
             onChange={handleInputChange}
