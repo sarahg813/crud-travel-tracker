@@ -1,0 +1,29 @@
+.travel-form-container {
+  width: 400px;
+  height: auto;
+}
+
+.travel-form {
+  display: flex;
+  flex-direction: column;
+  div {
+    margin-bottom: 0.75rem;
+  }
+}
+
+.travel-form__inputs {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+}
+
+.travel-form__buttons {
+  display: flex;
+  justify-content: space-between;
+}
+
+.travel-form__main-btn {
+  button {
+    margin-left: 1rem;
+  }
+}

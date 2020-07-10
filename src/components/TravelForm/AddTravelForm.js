@@ -35,6 +35,7 @@ const AddTravelForm = (props) => {
             type="number"
             name="year"
             value={travels.year}
+            className={"input--big"}
             onChange={handleInputChange}
           />
           <InputField
@@ -42,6 +43,7 @@ const AddTravelForm = (props) => {
             type="text"
             name="city"
             value={travels.city}
+            className={"input--big"}
             onChange={handleInputChange}
           />
           <Dropdown
@@ -55,11 +57,16 @@ const AddTravelForm = (props) => {
             required
           />
         </div>
-        <div>
-          <Button value="Save" type={"submit"} />
+        <div className="travel-form__buttons">
           <Button
             value="Cancel"
+            className={"btn btn--tertiary"}
             onClick={() => props.setShowAddEditModal(false)}
+          />
+          <Button
+            value="Save"
+            className="btn btn--tertiary btn--seablue"
+            type={"submit"}
           />
         </div>
       </form>

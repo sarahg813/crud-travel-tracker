@@ -20,9 +20,9 @@ const TravelsTable = (props) => {
         <table>
           <thead>
             <tr>
-              <th>Year</th>
-              <th>City</th>
-              <th>Country</th>
+              <th className="table-year">Year</th>
+              <th className="table-city">City</th>
+              <th className="table-country">Country</th>
             </tr>
           </thead>
           <tbody>
@@ -35,6 +35,7 @@ const TravelsTable = (props) => {
                   <td>
                     <Button
                       value="Edit"
+                      className={"btn btn--quaternary"}
                       onClick={() => {
                         props.editTravel(travel);
                       }}
@@ -51,7 +52,11 @@ const TravelsTable = (props) => {
         </table>
       </div>
       <div className="travels-add-btn">
-        <Button value="Add" onClick={() => props.setShowAddEditModal(true)} />
+        <Button
+          value="Add"
+          className={"btn btn--primary"}
+          onClick={() => props.setShowAddEditModal(true)}
+        />
       </div>
     </div>
   );

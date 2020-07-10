@@ -1,3 +1,15 @@
 th {
-  font-family: "Playfair Display", serif;
+  font-family: $font-stack-tertiary;
+}
+
+.table-year {
+  padding-right: 2rem;
+}
+
+.table-city {
+  width: 150px;
+}
+
+.table-country {
+  width: 200px;
 }

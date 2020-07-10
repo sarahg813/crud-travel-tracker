@@ -1,11 +1,16 @@
 @import "abstracts/mixins";
 @import "abstracts/variables";
 
+@import "base/normalize-mixin";
+@import "base/normalize-variables";
+@import "base/normalize-vertical-rhythm";
+
 @import "components/Button";
 @import "components/Dropdown";
 @import "components/Globe";
 @import "components/InputField";
 @import "components/Modal";
+@import "components/TravelForm";
 @import "components/TravelsTable";
 
 @import "pages/app";

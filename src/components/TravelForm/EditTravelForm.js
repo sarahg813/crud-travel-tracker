@@ -39,6 +39,7 @@ const EditTravelForm = (props) => {
             type="number"
             name="year"
             value={travel.year}
+            className={"input--big"}
             onChange={handleInputChange}
           />
           <InputField
@@ -46,6 +47,7 @@ const EditTravelForm = (props) => {
             type="text"
             name="city"
             value={travel.city}
+            className={"input--big"}
             onChange={handleInputChange}
           />
           <Dropdown
@@ -59,18 +61,29 @@ const EditTravelForm = (props) => {
             required
           />
         </div>
-        <div>
-          <Button
-            value="Delete"
-            onClick={() => {
-              props.deleteTravel(travel.id);
-              handleOnClick();
-            }}
-          />
-        </div>
-        <div>
-          <Button value="Save" type={"submit"} />
-          <Button value="Cancel" onClick={handleOnClick} />
+        <div className="travel-form__buttons">
+          <div>
+            <Button
+              value="Delete"
+              className={"btn btn--tertiary btn--lightgray"}
+              onClick={() => {
+                props.deleteTravel(travel.id);
+                handleOnClick();
+              }}
+            />
+          </div>
+          <div className="travel-form__main-btn">
+            <Button
+              value="Cancel"
+              className={"btn btn--tertiary"}
+              onClick={handleOnClick}
+            />
+            <Button
+              value="Save"
+              className={"btn btn--tertiary btn--seablue"}
+              type={"submit"}
+            />
+          </div>
         </div>
       </form>
     </div>
