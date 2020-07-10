@@ -1,9 +1,10 @@
-.earth {
-  width: 600px;
-  height: 600px;
+.globe {
+  width: 550px;
+  height: 550px;
   margin: auto;
   border-radius: 100%;
-  background: url(/images/world_map_3.jpg);
+  background: url(/images/world_map.png);
+  // Background vector created by freepik - www.freepik.com
   animation: rotate 25s linear infinite;
 }
 

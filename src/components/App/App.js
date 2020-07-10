@@ -4,7 +4,7 @@ import TravelsData from "../../data/TravelsData";
 import AddTravelForm from "../TravelForm/AddTravelForm";
 import EditTravelForm from "../TravelForm/EditTravelForm";
 import Modal from "../Modal";
-import Earth from "../Earth/Earth";
+import Globe from "../Globe/Globe";
 
 function App() {
   const initialFormState = { id: null, city: "", country: "", year: "" };
@@ -52,37 +52,44 @@ function App() {
   return (
     <div className="App">
       <div className="app-container">
-        <TravelsTable
-          travels={travels}
-          editTravel={editTravel}
-          setShowAddEditModal={setShowAddEditModal}
-        />
-      </div>
-      <div>
-        <Earth />
-      </div>
+        <div className="app__title">
+          <h1>World Travel Tracker</h1>
+        </div>
+        <div className="app__body">
+          <div>
+            <Globe />
+          </div>
+          <div>
+            <TravelsTable
+              travels={travels}
+              editTravel={editTravel}
+              setShowAddEditModal={setShowAddEditModal}
+            />
+          </div>
+        </div>
 
-      {showAddEditModal && (
-        <Modal>
-          {isEditing ? (
-            <EditTravelForm
-              isEditing={isEditing}
-              setIsEditing={setIsEditing}
-              showAddEditModal={showAddEditModal}
-              setShowAddEditModal={setShowAddEditModal}
-              selectedTravel={selectedTravel}
-              updateTravel={updateTravel}
-              deleteTravel={deleteTravel}
-            />
-          ) : (
-            <AddTravelForm
-              addTravel={addTravel}
-              showAddEditModal={showAddEditModal}
-              setShowAddEditModal={setShowAddEditModal}
-            />
-          )}
-        </Modal>
-      )}
+        {showAddEditModal && (
+          <Modal>
+            {isEditing ? (
+              <EditTravelForm
+                isEditing={isEditing}
+                setIsEditing={setIsEditing}
+                showAddEditModal={showAddEditModal}
+                setShowAddEditModal={setShowAddEditModal}
+                selectedTravel={selectedTravel}
+                updateTravel={updateTravel}
+                deleteTravel={deleteTravel}
+              />
+            ) : (
+              <AddTravelForm
+                addTravel={addTravel}
+                showAddEditModal={showAddEditModal}
+                setShowAddEditModal={setShowAddEditModal}
+              />
+            )}
+          </Modal>
+        )}
+      </div>
     </div>
   );
 }

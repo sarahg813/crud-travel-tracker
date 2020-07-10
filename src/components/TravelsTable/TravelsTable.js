@@ -16,9 +16,6 @@ const TravelsTable = (props) => {
 
   return (
     <div className="travels-container">
-      <div className="travels__title">
-        <h1>World Travel Tracker</h1>
-      </div>
       <div className="travels-table-container">
         <table>
           <thead>
