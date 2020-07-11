@@ -1,3 +1,15 @@
+.travels-container {
+  background-color: $white;
+  height: 70vh;
+  overflow: auto;
+  padding: 2rem;
+  box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
+}
+
+.travels-add-btn {
+  margin-bottom: 1rem;
+}
+
 th {
   font-family: $font-stack-tertiary;
 }

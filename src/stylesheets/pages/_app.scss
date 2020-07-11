@@ -2,9 +2,17 @@ h1 {
   font-family: $font-stack-secondary;
   font-size: 2.5rem;
   margin-left: 1.5rem;
+  text-shadow: 5px 5px $pink;
 }
 
 .app__body {
   display: flex;
   justify-content: space-around;
+  margin-top: 5rem;
+  height: 75vh;
+}
+
+.app__left-inner {
+  display: flex;
+  justify-content: center;
 }

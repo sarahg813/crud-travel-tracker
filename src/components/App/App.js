@@ -56,10 +56,10 @@ function App() {
           <h1>World Travel Tracker</h1>
         </div>
         <div className="app__body">
-          <div>
+          <div className="app__left-inner">
             <Globe />
           </div>
-          <div>
+          <div className="app__right-inner">
             <TravelsTable
               travels={travels}
               editTravel={editTravel}

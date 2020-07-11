@@ -35,7 +35,7 @@ const AddTravelForm = (props) => {
             type="number"
             name="year"
             value={travels.year}
-            className={"input--big"}
+            className={"input--small"}
             onChange={handleInputChange}
           />
           <InputField

@@ -16,6 +16,13 @@ const TravelsTable = (props) => {
 
   return (
     <div className="travels-container">
+      <div className="travels-add-btn">
+        <Button
+          value="Add"
+          className={"btn btn--primary"}
+          onClick={() => props.setShowAddEditModal(true)}
+        />
+      </div>
       <div className="travels-table-container">
         <table>
           <thead>
@@ -50,13 +57,6 @@ const TravelsTable = (props) => {
             )}
           </tbody>
         </table>
-      </div>
-      <div className="travels-add-btn">
-        <Button
-          value="Add"
-          className={"btn btn--primary"}
-          onClick={() => props.setShowAddEditModal(true)}
-        />
       </div>
     </div>
   );
