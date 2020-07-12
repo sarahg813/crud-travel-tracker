@@ -5,6 +5,7 @@ import AddTravelForm from "../TravelForm/AddTravelForm";
 import EditTravelForm from "../TravelForm/EditTravelForm";
 import Modal from "../Modal";
 import Globe from "../Globe/Globe";
+import Header from "../Header";
 
 function App() {
   const initialFormState = { id: null, city: "", country: "", year: "" };
@@ -53,7 +54,7 @@ function App() {
     <div className="App">
       <div className="app-container">
         <div className="app__title">
-          <h1>World Travel Tracker</h1>
+          <Header />
         </div>
         <div className="app__body">
           <div className="app__left-inner">

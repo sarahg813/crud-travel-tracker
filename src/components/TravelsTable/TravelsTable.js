@@ -24,7 +24,7 @@ const TravelsTable = (props) => {
         />
       </div>
       <div className="travels-table-container">
-        <table>
+        <table className="travels-table">
           <thead>
             <tr>
               <th className="table-year">Year</th>
