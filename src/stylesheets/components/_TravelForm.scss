@@ -1,6 +1,10 @@
 .travel-form-container {
-  width: 400px;
+  width: 250px;
   height: auto;
+
+  @include bp(lg) {
+    width: 400px;
+  }
 }
 
 .travel-form {

@@ -1,11 +1,17 @@
 .globe {
-  width: 550px;
-  height: 550px;
+  width: 250px;
+  height: 250px;
   margin: auto;
   border-radius: 100%;
-  background: url(/images/world_map.png);
+  background: url(/images/world_map_small.png);
   // Background vector created by freepik - www.freepik.com
   animation: rotate 25s linear infinite;
+
+  @include bp(lg) {
+    width: 550px;
+    height: 550px;
+    background: url(/images/world_map_large.png);
+  }
 }
 
 @keyframes rotate {

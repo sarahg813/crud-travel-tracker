@@ -1,9 +1,16 @@
 .travels-container {
   background-color: $white;
-  height: 70vh;
+  height: 500px;
   overflow: auto;
-  padding: 2rem;
+  padding: 0.5rem;
   box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
+  border-radius: 5px;
+
+  @include bp(lg) {
+    width: 600px;
+    padding: 2rem;
+    height: 70vh;
+  }
 }
 
 .travels-add-btn {
@@ -14,14 +21,14 @@ th {
   font-family: $font-stack-tertiary;
 }
 
-.table-year {
+.travels-table__year {
   padding-right: 2rem;
 }
 
-.table-city {
+.travels-table__city {
   width: 150px;
 }
 
-.table-country {
+.travels-table__country {
   width: 200px;
 }

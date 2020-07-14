@@ -6,6 +6,7 @@ import EditTravelForm from "../TravelForm/EditTravelForm";
 import Modal from "../Modal";
 import Globe from "../Globe/Globe";
 import Header from "../Header";
+import About from "../About/About";
 
 function App() {
   const initialFormState = { id: null, city: "", country: "", year: "" };
@@ -16,7 +17,7 @@ function App() {
 
   useEffect(() => {
     setTravels(travels.sort((a, b) => a.year - b.year));
-  });
+  }, [travels]);
 
   const addTravel = (travel) => {
     travel.id = travels.length + 1;
@@ -58,6 +59,7 @@ function App() {
         </div>
         <div className="app__body">
           <div className="app__left-inner">
+            <About />
             <Globe />
           </div>
           <div className="app__right-inner">
