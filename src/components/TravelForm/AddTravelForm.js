@@ -5,7 +5,7 @@ import Dropdown from "../Dropdown";
 import CountriesData from "../../data/CountriesData";
 
 const AddTravelForm = (props) => {
-  const initialState = { id: null, city: "", country: "", year: null };
+  const initialState = { id: null, city: "", country: "", year: "" };
   const [travels, setTravels] = useState(initialState);
 
   const handleInputChange = (event) => {

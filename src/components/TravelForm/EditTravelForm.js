@@ -65,7 +65,7 @@ const EditTravelForm = (props) => {
           <div>
             <Button
               value="Delete"
-              className={"btn btn--tertiary btn--lightgray"}
+              className={"btn btn--quaternary btn--lightgray"}
               onClick={() => {
                 props.deleteTravel(travel.id);
                 handleOnClick();
@@ -75,12 +75,12 @@ const EditTravelForm = (props) => {
           <div className="travel-form__main-btn">
             <Button
               value="Cancel"
-              className={"btn btn--tertiary"}
+              className={"btn btn--quaternary"}
               onClick={handleOnClick}
             />
             <Button
               value="Save"
-              className={"btn btn--tertiary btn--seablue"}
+              className={"btn btn--quaternary btn--seablue"}
               type={"submit"}
             />
           </div>
