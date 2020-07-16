@@ -7,9 +7,14 @@
   // Background vector created by freepik - www.freepik.com
   animation: rotate 25s linear infinite;
 
+  @include bp(md) {
+    width: 250px;
+    height: 250px;
+  }
+
   @include bp(lg) {
-    width: 550px;
-    height: 550px;
+    width: 350px;
+    height: 350px;
     background: url(/images/world_map_large.png);
   }
 }
