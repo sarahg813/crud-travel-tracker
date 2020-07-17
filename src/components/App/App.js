@@ -57,7 +57,7 @@ function App() {
         <div className="app__title">
           <Header />
         </div>
-        <div className="app__body">
+        <main className="app__body">
           <div className="app__left-inner">
             <About />
             <Globe />
@@ -69,7 +69,7 @@ function App() {
               setShowAddEditModal={setShowAddEditModal}
             />
           </div>
-        </div>
+        </main>
 
         {showAddEditModal && (
           <Modal>

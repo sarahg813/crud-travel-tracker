@@ -19,8 +19,7 @@
   text-transform: uppercase;
   border-radius: 5px;
   &:hover {
-    background-color: $lightseablue;
-    color: $white;
+    background-color: $skyblue;
   }
 }
 
@@ -43,8 +42,9 @@
   margin-top: auto;
   text-transform: uppercase;
   border-radius: 5px;
-  &:disabled {
-    display: none;
+  &:hover {
+    background-color: $salmon;
+    color: $darkslategray;
   }
 }
 
@@ -60,8 +60,8 @@
   text-transform: uppercase;
   border-radius: 5px;
   &:hover {
-    background-color: $lightseablue;
-    color: $white;
+    background-color: $salmon;
+    color: $darkslategray;
   }
 }
 
@@ -74,6 +74,6 @@
   background-color: $lightseablue;
 }
 
-.btn--lightgray {
-  background-color: $lightgray;
+.btn--gray {
+  background-color: $darkslategray;
 }

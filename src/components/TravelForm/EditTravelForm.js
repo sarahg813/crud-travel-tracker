@@ -65,7 +65,7 @@ const EditTravelForm = (props) => {
           <div>
             <Button
               value="Delete"
-              className={"btn btn--quaternary btn--lightgray"}
+              className={"btn btn--quaternary btn--gray"}
               onClick={() => {
                 props.deleteTravel(travel.id);
                 handleOnClick();

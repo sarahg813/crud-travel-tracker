@@ -1,5 +1,7 @@
 .about-container {
   width: 200px;
+  font-size: 0.95rem;
+
   @include bp(md) {
     width: 300px;
     font-size: 1.15rem;

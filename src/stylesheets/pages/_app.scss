@@ -26,10 +26,11 @@
   justify-content: space-between;
 
   @include bp(md) {
-    flex-direction: column;
+    justify-content: space-around;
   }
 
   @include bp(lg) {
+    flex-direction: column;
     justify-content: center;
   }
 }
